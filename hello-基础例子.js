@@ -1,8 +1,8 @@
 function sayHello(person) {
     return 'Hello, ' + person;
 }
-var user = 'Tom';
-console.log(sayHello(user));
+// let user = 'Tom';
+// console.log(sayHello(user));
 var isDone = false;
 var createByNewBoolean = new Boolean(1);
 var createByBoolean = Boolean(1);
@@ -137,11 +137,6 @@ function isApiError(error) {
     return false;
 }
 window.foo = 1;
-function getCacheData(key) {
-    return window.cache[key];
-}
-var tomCat2 = getCacheData('tom');
-tomCat2.run();
 function testCat(cat) {
     return cat;
 }
@@ -149,4 +144,34 @@ function toBoolean(something) {
     return Boolean(something);
 }
 toBoolean(1);
-console.log(toBoolean(1));
+// interface Animal {
+//     name: string;
+// }
+// interface Cat {
+//     name: string;
+//     run(): void;
+// }
+// const animal: Animal = {
+//     name: 'tom'
+// };
+// let tom: Cat = animal;  //报错
+//类型断言 VS 泛型
+// function getCacheData(key: string): any{
+//     return (window as any).cache[key];
+// }
+// interface Cat{
+//     name: string;
+//     run(): void;
+// }
+// const tom = getCacheData('tom') as Cat;
+// tom.run();
+// 改成泛型的写法
+// function getCacheData<T>(key: string): T{
+//     return (window as any).cache[key];
+// }
+// interface Cat{
+//     name: string;
+//     run(): void;
+// }
+// const tom = getCacheData<Cat>('tom');
+// tom.run();
